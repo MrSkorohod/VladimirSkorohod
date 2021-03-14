@@ -1,0 +1,36 @@
+#panel {
+    width: 296px;
+    height: 50px;
+    background-color: #bfbfbf;
+    border: 2px solid #484848;
+    text-align: right;
+
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    width:300px;
+}
+.button{
+    display: flex;
+    justify-content: space-between;
+}
+.button div{
+    border: 1px solid #8B8B8B;
+    padding: 20px;
+    width:20px;
+    background-color: #afafaf;
+}
+.downButton {
+    width: 240px;
+}
+#ans{
+    width: 60px;
+    background-color: #AF1F28;
+    text-align: center;
+    padding-top: 45px;
+}
+.down{
+    display: flex;
+    justify-content: space-between;
+}
