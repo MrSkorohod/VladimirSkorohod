@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ClassWork</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="formCreate">
+    <input type="text" name="imageName" id="imageName" placeholder="URL картинки">
+    <input type="text" name="price" id="price" placeholder="Цена">
+    <textarea name="description" id="description" cols="30" rows="10" placeholder="Описание"></textarea>
+    <input type="text" name="dataId" id="dataId" placeholder="Уникальный идентификатор">
+    <button id="create">Create</button>
+</div>
+<button id="newCard">New card</button>
+<div id="addCard">
+    <button id="add">Add Card</button>
+</div>
+
+<!--<div id="sort">-->
+<!--    <select name="sortCard" id="sortCard">-->
+<!--        <option value="">Select sorting</option>-->
+<!--        <option value="up">Price Up</option>-->
+<!--        <option value="down">Price Down</option>-->
+<!--    </select>-->
+<!--</div>-->
+<div id="cards">
+
+</div>
+<button id="basket">Go to basket</button>
+<div id="myModal" class="modal">
+    <div class="modal-content ">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Basket</h2>
+        </div>
+        <div class="modal-body basket">
+
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
