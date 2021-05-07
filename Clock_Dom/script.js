@@ -24,6 +24,17 @@ const num = 12;
 function radian(deg){
     return (Math.PI / 180) * deg;
 }
+function clockArrows (){
+    let date = new Date();
+    divClockNow.innerHTML = date.toLocaleTimeString();
+    divCircle.appendChild(divClockNow);
+    const hour = date.getHours() * 30;
+    const minute = date.getMinutes() * 6;
+    const seconds = date.getSeconds() * 6;
+    divHourArrow.style.transform = `rotate(${(hour) + (minute/12)}deg)`;
+    divMinuteArrow.style.transform = `rotate(${minute}deg)`;
+    divSecondArrow.style.transform = `rotate(${seconds}deg)`;
+}
 const radius = 170;
 for (let i = 0; i < num; i++){
     const miniCirle = document.createElement("div");
@@ -38,16 +49,8 @@ for (let i = 0; i < num; i++){
     divCircle.appendChild(miniCirle);
 }
 
-
+clockArrows();
 setInterval(()=>{
-    let date = new Date();
-    divClockNow.innerHTML = date.toLocaleTimeString();
-    divCircle.appendChild(divClockNow);
-    const hour = date.getHours() * 30;
-    const minute = date.getMinutes() * 6;
-    const seconds = date.getSeconds() * 6;
-    divHourArrow.style.transform = `rotate(${(hour) + (minute/12)}deg)`;
-    divMinuteArrow.style.transform = `rotate(${minute}deg)`;
-    divSecondArrow.style.transform = `rotate(${seconds}deg)`;
+    clockArrows();
 },1000);
 body.appendChild(divCircle);
